@@ -1,0 +1,43 @@
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{/home}">
+
+<section layout:fragment="content" class="user">
+	<form class="user" method="POST">
+		<div>
+			<label for="username">USERNAME</label> <input type="text"
+				id="username" th:value="${USER.username}" name="username" />
+		</div>
+
+		<div>
+			<label for="password">PASSWORD</label> <input type="text"
+				id="password" name="password" />
+		</div>
+
+		<div>
+			<label for="repassword">REPASSWORD</label> <input type="password"
+				id="repassword" name="repassword" />
+		</div>
+
+		<div>
+			<label for="u_name">이름</label> <input type="text" id="u_name"
+				name="u_name" />
+		</div>
+
+		<div>
+			<label for="u_nickname">닉네임</label> <input type="text"
+				id="u_nickname" name="u_nickname" />
+		</div>
+
+		<div>
+			<label for="u_tel">전화번호</label> <input type="phone" id="u_tel"
+				name="u_tel" />
+		</div>
+
+		<div>
+			<button>회원가입</button>
+		</div>
+		<div></div>
+	</form>
+</section>
+</html>

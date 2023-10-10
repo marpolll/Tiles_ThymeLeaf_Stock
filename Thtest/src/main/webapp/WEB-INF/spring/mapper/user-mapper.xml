@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.marpol.thtest.persistance.UserDao">
+  
+  	<select id="create_user_table">
+  		create table IF NOT EXISTS tbl_users (
+  			username varchar(15) PRIMARY KEY,
+  			password varchar(255) NOT NULL,
+  			u_name varchar(20) NOT NULL,
+  			u_nickname varchar(20),
+  			u_tel varchar(15),
+  			u_role varchar(15) NOT NULL
+  			)
+  	</select>
+  	
+  	<insert id="insert">
+  		insert into tbl_users
+  			(username, password, u_name, u_nickname, u_tel, u_role)
+  			values
+  				(#{username}, #{password}, #{u_name}, #{u_nickname}, #{u_tel}, #{u_role} )
+  	</insert>
+  
+  <update id="update"></update>
+  
+  </mapper>

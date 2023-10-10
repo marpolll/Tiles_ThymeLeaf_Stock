@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html
+  lang="ko"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{/home}"
+>
+
+  <section layout:fragment="content">
+    <form class="main" method="POST" th:action="@{/info}">
+      <div class="input">
+       
+       <input placeholder="테스트">
+       
+      </div>
+      
+      <div>
+      <strong>정보</strong><span>${API.pageNo}</span>
+      </div>
+      
+      
+
+      <div class="input_button">
+        <button id="btn_save" type="button">저장</button>
+      </div>
+    </form>
+    <!-- 
+    <th:block th:replace="~{./car/list :: main_list}" />
+     -->
+  </section>
+</html>
